@@ -1,0 +1,22 @@
+# IntelliJ
+.idea/
+
+# emacs
+.ensime
+
+# build output
+target/
+lib_managed/
+
+# other stuff
+logs/
+.vagrant/
+.boot/
+.ivy/
+.sbtboot/
+
+*.log
+.DS_Store
+dashboards/.DS_Store
+pipeline.yml
+docker-compose[^\.]**
