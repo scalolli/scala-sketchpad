@@ -25,7 +25,7 @@ class Dao {
   def save(employee: Employee): IO[Employee] = {
     val actions =
       (employees returning employees.map(_.id)
-        into ((employee, insertedId) => employee.copy(_1 = insertedId))) += (-1, employee.name)
+        into ((employee, insertedId) => employee.copy(_1 = Some(insertedId)))) += (-1, employee.name)
 
     IO.fromFuture(IO(db.run(actions))).map(a => Employee(a._1, a._2))
   }
