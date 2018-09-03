@@ -12,7 +12,7 @@ trait Encoder[T] {
 }
 
 object Encoder {
-  implicit def stringEncoder = new Encoder[String] {
+  implicit object StringEncoder extends Encoder[String] {
     override def encode(t: String): Json = JsonString(t)
   }
 }
