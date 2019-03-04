@@ -41,7 +41,6 @@ object GuessingGame {
 
     internal(word, "")
   }
-
 }
 
 
